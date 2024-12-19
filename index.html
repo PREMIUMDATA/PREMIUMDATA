@@ -9,12 +9,28 @@
     <link rel="script" href="script.js">
 </head>
 <body>
-    
+    <h1>Hi what is your name?</h1>
+    <input type="text" id="userinput" placeholder="Type your name here">
+    <button onclick="showMessage()" >Submit</button> 
     <script>
         
-         age = prompt('How old are you?'); 
-        alert(`You are ${age} years old`)
-        alert("this is getting interesting")
+         age = prompt('How old are you?'); //This is to get age
+         alert(`You are ${age} years old`); // tell user their age
+        alert("this is getting interesting")// fun
+        
+    function showMessage() {
+        //getting value from user
+        const input = document.getElementById("userinput").value ;
+            if (input){
+                alert("Hello " + input + `! \nYou are ${age} years old `)
+            }
+            else {
+                alert("Please fill in your name")
+            }
+        }
+
+        
+    
     </script>
 </body>
 </html>
